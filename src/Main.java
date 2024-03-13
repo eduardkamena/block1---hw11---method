@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void calculateLeapYear(int year) {
-        if ((year >= 1584 && year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -39,11 +39,11 @@ public class Main {
 
         // Task 1:
         System.out.println("Task 1:");
-        calculateLeapYear(1600);
+        calculateLeapYear(2024);
 
         // Task 2:
         System.out.println("Task 2:");
-        identifyOS(1, 2022);
+        identifyOS(1, 2024);
 
         // Task 3:
         System.out.println("Task 3:");
