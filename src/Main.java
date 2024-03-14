@@ -22,14 +22,20 @@ public class Main {
             System.out.println("Данный телефон не поддерживается, но мы уже работаем на этим)");
         }
     }
+    public static void printDeliveryMessage(int deliveryDays) {
+        System.out.println("Потребуется дней: " + deliveryDays);
+    }
     public static int identifyDeliveryDays(int distance) {
-        int deliveryDays = 1;
+        int deliveryDays = 0; // Можно было начать с 1, но сделал с 0
         if (distance < 20) {
-            System.out.println("Потребуется дней: " + deliveryDays);
+            deliveryDays += 1;
+            printDeliveryMessage(deliveryDays);
         } else if (distance >= 20 && distance <= 60) {
-            System.out.println("Потребуется дней: " + (deliveryDays + 1));
+            deliveryDays += 2;
+            printDeliveryMessage(deliveryDays);
         } else if (distance > 60 && distance <= 100) {
-            System.out.println("Потребуется дней: " + (deliveryDays + 2));
+            deliveryDays += 3;
+            printDeliveryMessage(deliveryDays);
         } else {
             System.out.println("Доставки нет");
         }
